@@ -38,7 +38,7 @@ RTHumidity *RTHumidity::createHumidity(RTIMUSettings *settings)
 
     case RTHUMIDITY_TYPE_AUTODISCOVER:
         if (settings->discoverHumidity(settings->m_humidityType, settings->m_I2CHumidityAddress)) {
-            settings->saveSettings();
+            //settings->saveSettings();
             return RTHumidity::createHumidity(settings);
         }
         return NULL;

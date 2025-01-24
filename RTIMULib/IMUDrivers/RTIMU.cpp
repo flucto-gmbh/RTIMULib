@@ -114,7 +114,7 @@ RTIMU *RTIMU::createIMU(RTIMUSettings *settings)
 
     case RTIMU_TYPE_AUTODISCOVER:
         if (settings->discoverIMU(settings->m_imuType, settings->m_busIsI2C, settings->m_I2CSlaveAddress)) {
-            settings->saveSettings();
+            //settings->saveSettings();
             return RTIMU::createIMU(settings);
         }
         return new RTIMUNull(settings);
@@ -293,7 +293,7 @@ void RTIMU::handleGyroBias()
             if (m_gyroSampleCount == (5 * m_sampleRate)) {
                 // this could have been true already of course
                 m_settings->m_gyroBiasValid = true;
-                m_settings->saveSettings();
+                //m_settings->saveSettings();
             }
         } else {
             m_settings->m_gyroBias.setX((1.0 - m_gyroContinuousAlpha) * m_settings->m_gyroBias.x() + m_gyroContinuousAlpha * m_imuData.gyro.x());

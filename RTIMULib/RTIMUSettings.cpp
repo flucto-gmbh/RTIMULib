@@ -43,6 +43,11 @@
 
 #define RATE_TIMER_INTERVAL 2
 
+RTIMUSettings::RTIMUSettings()
+{
+    setDefaults();
+}
+
 RTIMUSettings::RTIMUSettings(const char *productType)
 {
     if ((strlen(productType) > 200) || (strlen(productType) == 0)) {

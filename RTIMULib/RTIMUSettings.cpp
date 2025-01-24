@@ -48,6 +48,8 @@ RTIMUSettings::RTIMUSettings()
     setDefaults();
 }
 
+// Remove these constructors
+/*
 RTIMUSettings::RTIMUSettings(const char *productType)
 {
     if ((strlen(productType) > 200) || (strlen(productType) == 0)) {
@@ -69,7 +71,7 @@ RTIMUSettings::RTIMUSettings(const char *settingsDirectory, const char *productT
     }
     loadSettings();
 }
-
+*/
 
 bool RTIMUSettings::discoverIMU(int& imuType, bool& busIsI2C, unsigned char& slaveAddress)
 {

@@ -194,10 +194,6 @@ public:
     // New constructor that uses only default values
     RTIMUSettings();
 
-    // Existing constructors
-    RTIMUSettings(const char *productType);
-    RTIMUSettings(const char *settingsDirectory, const char *productType);
-
     //  This function tries to find an IMU. It stops at the first valid one
     //  and returns true or else false
 

@@ -89,7 +89,7 @@ void RTIMUMagCal::magCalSaveMinMax()
     m_settings->m_compassCalMin = m_magMin;
     m_settings->m_compassCalMax = m_magMax;
     m_settings->m_compassCalEllipsoidValid = false;
-    m_settings->saveSettings();
+    //m_settings->saveSettings();
 
     //  need to invalidate ellipsoid data in order to use new min/max data
 
@@ -209,7 +209,7 @@ bool RTIMUMagCal::magCalSaveCorr(const char *ellipsoidFitPath)
         m_settings->m_compassCalEllipsoidValid = true;
         m_settings->m_compassCalEllipsoidOffset = RTVector3(a[0], a[1], a[2]);
         memcpy(m_settings->m_compassCalEllipsoidCorr, b, 9 * sizeof(float));
-        m_settings->saveSettings();
+        //m_settings->saveSettings();
         return true;
     }
     return false;

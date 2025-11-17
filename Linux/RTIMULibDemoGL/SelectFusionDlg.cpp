@@ -45,7 +45,7 @@ SelectFusionDlg::~SelectFusionDlg()
 void SelectFusionDlg::onOk()
 {
     m_settings->m_fusionType = m_selectFusion->currentIndex();
-    m_settings->saveSettings();
+    //m_settings->saveSettings();
 
     accept();
 }

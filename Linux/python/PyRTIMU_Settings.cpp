@@ -307,15 +307,7 @@ static PyObject* RTIMU_Settings_new(PyTypeObject *type, PyObject *args, PyObject
 
 static int RTIMU_Settings_init(RTIMU_Settings *self, PyObject *args, PyObject *kwds)
 {
-    const char* product_name;
-
-    // The user should pass "product name" as an argument
-    if (!PyArg_ParseTuple(args, "s", &product_name))
-        return -1;
-
-    // Create an RTIMUSettings object
-    self->val =  new RTIMUSettings(product_name);
-
+    self->val = new RTIMUSettings();
     return 0;
 }
 

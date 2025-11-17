@@ -57,7 +57,7 @@ void SelectIMUDlg::onOk()
         m_settings->m_SPIBus = m_selectBus->currentIndex() - 8;
     }
     m_settings->m_imuType = m_selectIMU->currentIndex();
-    m_settings->saveSettings();
+    //m_settings->saveSettings();
 
     accept();
 }

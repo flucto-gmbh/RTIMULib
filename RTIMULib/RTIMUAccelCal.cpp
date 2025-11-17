@@ -98,6 +98,6 @@ bool RTIMUAccelCal::accelCalSave()
     m_settings->m_accelCalValid = true;
     m_settings->m_accelCalMin = m_accelMin;
     m_settings->m_accelCalMax = m_accelMax;
-    m_settings->saveSettings();
+    //m_settings->saveSettings();
     return true;
 }
